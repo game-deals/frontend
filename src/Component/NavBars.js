@@ -41,7 +41,7 @@ return(
                 <MDBNavbarLink href='#'>Favorite</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Games List</MDBNavbarLink>
+                <MDBNavbarLink href='./favDeals'>Deal List</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='#'>About Us </MDBNavbarLink>

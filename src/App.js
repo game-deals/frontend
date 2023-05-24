@@ -1,10 +1,14 @@
 
-
+import {Routes , Route} from 'react-router-dom'; 
+import FavDeals from './Component/FavDeals';
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+   <>
+   <Routes >
+    <Route path='/FavDeals' element={<FavDeals />}>  </Route>
+
+    </Routes>
+   </>
   );
 }
 

@@ -1,13 +1,18 @@
 
-import {Routes,Route} from "react-router-dom";
+
+import {Routes , Route} from 'react-router-dom'; 
+import FavDeals from './Component/FavDeals';
 import Home from "./Component/Home";
 function App() {
   return (
-    <div className="App">
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      </Routes>     
-    </div>
+   <>
+   <Routes >
+    <Route path="/" element={<Home/>}/>
+    <Route path='/FavDeals' element={<FavDeals />}>  </Route>
+
+    </Routes>
+   </>
+
   );
 }
 

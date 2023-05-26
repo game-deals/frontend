@@ -39,6 +39,9 @@ return(
                 <MDBNavbarLink href='./FavDeals'>Deals List</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
+                <MDBNavbarLink href='./News'>News </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
                 <MDBNavbarLink href='#'>About Us </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>

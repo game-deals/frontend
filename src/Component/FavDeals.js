@@ -4,37 +4,38 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "axios";
 import React from 'react';
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardImage,
-  MDBBtn,
-  MDBRipple
-} from 'mdb-react-ui-kit';
+import Button from 'react-bootstrap/Button';
+import styles from "./style.module.css";
 
-export default function FavDeals() {
+// import {
+//   MDBCard,
+//   MDBCardBody,
+//   MDBCardTitle,
+//   MDBCardText,
+//   MDBCardImage,
+//   MDBBtn,
+//   MDBRipple
+// } from 'mdb-react-ui-kit';
+import { Link } from "react-router-dom";
+
+export default function FavDeals(props) {
   const imagePath = "http://image.tmdb.org/t/p/w500/";
 
-  const [favArr, setFavArr] = useState([]);
-  // const [showFlag, setShowFlag] = useState(false);
+  const [favArrGame, setFavArrGame] = useState([]);
+  const [show, setUpdModal] = useState(false);
   const [clickedMovie, setclickedMovie] = useState({});
-  const [showFlagUpdate, setShowFlagUpdate] = useState(false);
-  const [newArr, setNewArr] = useState([]);
 
-  const showUpdateModal = (item) => {
-    setShowFlagUpdate(true);
-    setclickedMovie(item);
-    console.log(item);
+  const getFavGame = () => {
+    const serverURL = `http://localhost:3005/getFav`;
+    fetch(serverURL).then((response) => {
+      response.json().then((data) => {
+        setFavArrGame(data);
+      });
+    });
   };
-  const handleClose = () => {
-    setShowFlagUpdate(false);
-  };
-
-  const deleteFavMovie = (item) => {
+  const deleteFavGame = (item) => {
     console.log("delete obj", item);
-    const serverURL = `${process.env.REACT_APP_serverURL}/deleteMovies/${item.id}`;
+    const serverURL = `http://localhost:3005/delete/${item.id}`;
     axios
       .delete(serverURL)
       .then((response) => {
@@ -44,78 +45,82 @@ export default function FavDeals() {
         console.log(error);
       });
   };
+  // const displayUpdaModal=(item)=>{
+  //   setUpdModal(true);
+  //   setclickedMovie(item);
+  // }
+  // const closeUpdModal=()=>{
+  //   setUpdModal(false);
+  // }
 
-  const takeNewDataFromUpdatedModal = (arr) => {
-    setNewArr(arr);
-    // console.log(newArr)
-  };
-
-  const getFavMovie = () => {
-    const serverURL = `${process.env.REACT_APP_serverURL}/getMovies`;
-    fetch(serverURL).then((response) => {
-      response.json().then((data) => {
-        setFavArr(data);
-        // console.log(data)
-      });
-    });
-  };
   useEffect(() => {
-    getFavMovie();
-    setNewArr(favArr);
-  }, [favArr]);
+  getFavGame();
+  },[] );
 
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <h1 style={{ padding: "55px",color:"white" }}>Favorite Deals List</h1>
+    
+    <div className="cardGrid">
+  {favArrGame.map((item) => {
+    console.log(item);
+    return (
+      // <div className="cardCon">
+      //   <div className="cardd">
+      //     <MDBCard className="mdCard">
+      //       <MDBCardImage src={item.thumb} position="top" alt="..." g />
+      //       <MDBCardBody className="cardd">
+      //         <MDBCardTitle>{item.title}</MDBCardTitle>
+      //         <MDBCardText>{item.steamratingcount}</MDBCardText>
+      //         <MDBCardText>
+      //           steam rating percent: {item.steamratingpercent + "%"}
+      //         </MDBCardText>
+      //         <MDBCardText>{item.comment}</MDBCardText>
+      //         <MDBBtn href="#">Button</MDBBtn>
+      //       </MDBCardBody>
+      //     </MDBCard>
+      //   </div>
+      // </div>
+      
+      <div className="nft">
+      <div className='main'>
+      <Link to="" className="hero-image-container">
+        <img class="hero-image" src={item.thumb} height="250px"width="250px" alt="Spinning glass cube"/>
+      </Link>
+        <h2>{item.title}</h2>
+        
+        <div className='tokenInfo'>
+          <div className="price">
+          Watch: 
+            {item.steamRatingCount}
+          </div>
+          <div className="">
+            <ins>Rating: </ins>
+            {item.steamRatingPercent+"%"}
+          </div>
+        </div>
+        <hr />
+        <div><span style={{fontWeight:"bold"}}>Review: </span>{item.comment}</div>
+        <hr />
+        <Button variant="dark" >Update</Button><br/>
+        <Button variant="outline-danger" onClick={()=>{deleteFavGame(item)}}>Delete</Button>
 
+      </div>
+    </div>
+    );
+  })}
+  </div>
 
-      <div style={{width:"100%", display:"flex", flexWrap:"wrap", padding:"20px", gap:"25px"}} >
-      <div style={{width:"250px"}} >
-
-      <MDBCard className="mdCard">
-      <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/184.webp' position='top' alt='...' />
-      <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
-        <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
-      </MDBCardBody>
-    </MDBCard>
-        </div>  
-
-        <div style={{width:"250px"}}>
-
-      <MDBCard>
-      <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/184.webp' position='top' alt='...' />
-      <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
-        <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
-      </MDBCardBody>
-    </MDBCard>
-        </div> 
-        <div style={{width:"250px"}}>
-
-      <MDBCard>
-      <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/184.webp' position='top' alt='...' />
-      <MDBCardBody>
-        <MDBCardTitle>Card title</MDBCardTitle>
-        <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
-      </MDBCardBody>
-    </MDBCard>
-        </div> 
-   </div>
+     
+   {/* <updateModal
+   updateModalll={show}
+   closeUpdModal={closeUpdModal}
+   clickedMovie={clickedMovie}/> */}
 
   <Footer/>
 
-        {/* <ModalMovie showFlag={showFlag} handleClose={handleClose} clickedMovie={clickedMovie}/> */}
+  
       
    
     </>

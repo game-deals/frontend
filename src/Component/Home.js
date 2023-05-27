@@ -1,3 +1,4 @@
+import FavDeals from "./FavDeals";
 import GameDeals from "./GameDeals";
 import NavBars from "./NavBars";
 import Poster from "./Poster";

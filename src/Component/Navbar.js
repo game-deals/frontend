@@ -18,9 +18,9 @@ return(
 
 
 < div >
-<MDBNavbar expand='lg' light bgColor='white' style={{display:"flex" ,gap:"10px",justifyContent:"space-around" ,fontSize:"20px" }}>
+<MDBNavbar className='navv' expand='lg' light bgColor='white' style={{display:"flex" ,gap:"10px",justifyContent:"space-around" ,fontSize:"20px" }}>
         <MDBContainer  fluid  >
-        <MDBNavbarBrand href='#'>Games Deal</MDBNavbarBrand>
+        <MDBNavbarBrand href='#' >Games Deal</MDBNavbarBrand>
           <MDBNavbarToggler
             onClick={() => setShowBasic(!showBasic)}
             aria-controls='navbarExample01'
@@ -36,7 +36,10 @@ return(
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='./FavDeals'>Deals List</MDBNavbarLink>
+                <MDBNavbarLink href='./FavDeals'>Favorite</MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='./#'>NEWS</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='#'>About Us </MDBNavbarLink>

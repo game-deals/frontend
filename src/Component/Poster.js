@@ -20,7 +20,7 @@ function Poster (){
 
         <div
         className='p-5 text-center bg-image'
-        style={{ backgroundImage: "url('https://wallpapercave.com/uwp/uwp3536518.jpeg')", height: "600px" , width: "100%", }}
+        style={{ backgroundImage: "url('https://c1.wallpaperflare.com/preview/345/287/635/playstation-controller-blue-dark.jpg')", height: "600px" , width: "100%", }}
       >
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>

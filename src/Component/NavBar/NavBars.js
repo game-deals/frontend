@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 
 import {
@@ -12,7 +14,7 @@ import {
     MDBNavbarBrand,
 } from 'mdb-react-ui-kit';
 
-function NavBar() {
+function NavBars() {
     const [showBasic, setShowBasic] = useState(false);
 return(
 
@@ -20,7 +22,7 @@ return(
 < div >
 <MDBNavbar className='navv' expand='lg' light bgColor='white' style={{display:"flex" ,gap:"10px",justifyContent:"space-around" ,fontSize:"20px" }}>
         <MDBContainer  fluid  >
-        <MDBNavbarBrand href='#' >Games Deal</MDBNavbarBrand>
+        <MDBNavbarBrand href='/'>Games Deal</MDBNavbarBrand>
           <MDBNavbarToggler
             onClick={() => setShowBasic(!showBasic)}
             aria-controls='navbarExample01'
@@ -32,14 +34,17 @@ return(
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav right className='mb-2 mb-lg-0'>
               <MDBNavbarItem active >
-                <MDBNavbarLink aria-current='page' href='./'> Home
+                <MDBNavbarLink aria-current='page' href='#'> Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='./FavDeals'>Favorite</MDBNavbarLink>
+                <MDBNavbarLink href='#'>Favorite</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='./#'>NEWS</MDBNavbarLink>
+                <MDBNavbarLink href='./favDeals'>Deal List</MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='./News'>News </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='#'>About Us </MDBNavbarLink>
@@ -54,4 +59,4 @@ return(
 )
 
 }
-export default NavBar;
+export default NavBars;

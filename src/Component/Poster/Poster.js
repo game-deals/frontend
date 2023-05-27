@@ -11,6 +11,8 @@ import {
     MDBCollapse,
     MDBBtn
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
 function Poster (){
 
     const [showBasic, setShowBasic] = useState(false);
@@ -20,17 +22,19 @@ function Poster (){
 
         <div
         className='p-5 text-center bg-image'
-        style={{ backgroundImage: "url('https://c1.wallpaperflare.com/preview/345/287/635/playstation-controller-blue-dark.jpg')", height: "600px" , width: "100%", }}
+        style={{ backgroundImage: "url('https://wallpapercave.com/uwp/uwp3536518.jpeg')", height: "600px" , width: "100%",  }}
+       
       >
+        <Image src='./Assets/Header.jpeg'></Image>
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-white'>
-              <h1 className='mb-3'>MOST GAMES ARE LOST , NOT WON</h1>
+              <h1 className='mb-3'>Opportunities don't happen , you create them</h1>
               <h4 className='mb-3'>let's show the deal games</h4>
               
-              <MDBBtn color='light' tag="a" outline size="lg" className="m-2"rel="nofollow"target="_blank">
-               Show deals
-              </MDBBtn>
+              <a href='#Deals'><MDBBtn color='light'  outline size="lg" className="m-2"rel="nofollow"target="_blank">
+               Show deals 
+              </MDBBtn></a>
             </div>
           </div>
         </div>

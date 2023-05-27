@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 .card {
   width: var(--card-width);
   height: var(--card-height);
@@ -14,13 +15,15 @@
   justify-content: center;
   align-items: center;
   perspective: 2500px;
-  margin: 15px;
+  margin: 20px;
 }
 
+.div-card{
+  transition: translateY(-5%)
+}
 .cover-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 300px;
 }
 
 .wrapper {
@@ -30,7 +33,7 @@
 }
 
 .card:hover .wrapper {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  transform:   translateZ(0);
   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
@@ -67,20 +70,20 @@
   );
 }
 
-.card:hover .wrapper::before,
+/* .card:hover .wrapper::before,
 .wrapper::after {
   opacity: 1;
 }
 
 .card:hover .wrapper::after {
   height: 120px;
-}
+} */
 .title {
   width: 100%;
   transition: transform 0.5s;
 }
 .card:hover .title {
-  transform: translate3d(0%, -50px, 100px);
+  transform: translate3d(0px, 10px, 50px);
 }
 
 .character {

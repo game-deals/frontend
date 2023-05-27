@@ -1,5 +1,4 @@
 
-
 import {Routes , Route} from 'react-router-dom'; 
 import FavDeals from './Component/FavDeals';
 import Home from "./Component/Home";

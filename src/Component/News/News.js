@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import { CardGroup } from 'react-bootstrap';
 import { MDBCard, MDBCardImage, MDBCardOverlay, MDBCardText, MDBCardTitle, MDBRipple } from 'mdb-react-ui-kit';
-import NavBars from './NavBar/NavBars';
+import NavBars from '../NavBar/NavBars';
 
    
 

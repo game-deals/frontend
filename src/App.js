@@ -1,8 +1,9 @@
 
 import {Routes , Route} from 'react-router-dom'; 
 import Home from './Component/Home/Home'
-import News from './Component/News'
-import FavDeals from './Component/FavDeals';
+import News from './Component/News/News'
+import FavDeals from './Component/FavDeal/FavDeals';
+
 function App() {
   return (
    <>

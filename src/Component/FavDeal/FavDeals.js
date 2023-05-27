@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import './favDeals.css'
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Footer from "../Footer/Footer";
 import axios from "axios";
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import styles from "./style.module.css";
-
+import NavBar from '../NavBar/NavBars'
 // import {
 //   MDBCard,
 //   MDBCardBody,
@@ -17,14 +16,30 @@ import styles from "./style.module.css";
 //   MDBRipple
 // } from 'mdb-react-ui-kit';
 import { Link } from "react-router-dom";
+import ModalGamesUpdate from "../ModalGames/ModalGamesUpdate";
 
 export default function FavDeals(props) {
-  const imagePath = "http://image.tmdb.org/t/p/w500/";
-
   const [favArrGame, setFavArrGame] = useState([]);
-  const [show, setUpdModal] = useState(false);
-  const [clickedMovie, setclickedMovie] = useState({});
 
+  const [gamesdata,setgamessdata]=useState([]);
+  const [showFlag, setShowFlag] = useState(false);
+
+  const [clickedgames, setclickedgames] = useState({});
+
+  function allFavData(arr){
+    setgamessdata(arr)
+  }
+  const handleShow = (item) => {
+    // console.log(item)
+    setclickedgames(item)
+    setShowFlag(true)
+}
+const handleClose = () => {
+  setShowFlag(false)
+}
+
+
+ 
   const getFavGame = () => {
     const serverURL = `http://localhost:3005/getFav`;
     fetch(serverURL).then((response) => {
@@ -52,19 +67,20 @@ export default function FavDeals(props) {
   // const closeUpdModal=()=>{
   //   setUpdModal(false);
   // }
+  getFavGame();
 
   useEffect(() => {
-  getFavGame();
-  },[] );
+
+setgamessdata(favArrGame)
+  },[favArrGame] );
 
   return (
     <>
-      <Navbar/>
+    <NavBar/>
       <h1 style={{ padding: "55px",color:"white" }}>Favorite Deals List</h1>
     
     <div className="cardGrid">
-  {favArrGame.map((item) => {
-    console.log(item);
+  {gamesdata.map((item) => {
     return (
       // <div className="cardCon">
       //   <div className="cardd">
@@ -103,14 +119,18 @@ export default function FavDeals(props) {
         <hr />
         <div><span style={{fontWeight:"bold"}}>Review: </span>{item.comment}</div>
         <hr />
-        <Button variant="dark" >Update</Button><br/>
+        <Button variant="dark" onClick={() => { handleShow(item) }} >Update</Button><br/>
         <Button variant="outline-danger" onClick={()=>{deleteFavGame(item)}}>Delete</Button>
+
 
       </div>
     </div>
+    
     );
   })}
   </div>
+  <ModalGamesUpdate showFlag={showFlag} clickedgames={clickedgames} handleClose={handleClose} allFavData={allFavData}/>
+
 
      
    {/* <updateModal

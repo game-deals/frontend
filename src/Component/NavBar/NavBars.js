@@ -34,14 +34,14 @@ return(
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav right className='mb-2 mb-lg-0'>
               <MDBNavbarItem active >
-                <MDBNavbarLink aria-current='page' href='#'> Home
+                <MDBNavbarLink aria-current='page' href='/'> Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Favorite</MDBNavbarLink>
+                <MDBNavbarLink href='/FavDeals'>Favorite</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='./favDeals'>Deal List</MDBNavbarLink>
+                <MDBNavbarLink href=''>Deal List</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='./News'>News </MDBNavbarLink>

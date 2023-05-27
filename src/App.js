@@ -1,15 +1,15 @@
 
 import {Routes , Route} from 'react-router-dom'; 
-import FavDeals from './Component/FavDeals';
-import Home from "./Component/Home";
-import News from './Component/News';
+import Home from './Component/Home/Home'
+import News from './Component/News'
 function App() {
   return (
    <>
    <Routes >
     <Route path="/" element={<Home/>}/>
-    <Route path='/FavDeals' element={<FavDeals />}>  </Route>
-    <Route path='/News' element={<News/>} /> 
+    <Route path='/News' element={<News/>} />
+    {/* <Route path='/FavDeals' element={<FavDeals />}>  </Route>
+      */}
     </Routes>
    </>
 

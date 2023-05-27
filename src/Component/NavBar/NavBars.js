@@ -22,7 +22,7 @@ return(
 < div >
 <MDBNavbar expand='lg' light bgColor='white' style={{display:"flex" ,gap:"10px",justifyContent:"space-around" ,fontSize:"20px" }}>
         <MDBContainer  fluid  >
-        <MDBNavbarBrand href='#'>Games Deal</MDBNavbarBrand>
+        <MDBNavbarBrand href='/'>Games Deal</MDBNavbarBrand>
           <MDBNavbarToggler
             onClick={() => setShowBasic(!showBasic)}
             aria-controls='navbarExample01'

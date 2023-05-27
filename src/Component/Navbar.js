@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 
 import {
@@ -14,7 +12,7 @@ import {
     MDBNavbarBrand,
 } from 'mdb-react-ui-kit';
 
-function NavBars() {
+function NavBar() {
     const [showBasic, setShowBasic] = useState(false);
 return(
 
@@ -34,14 +32,11 @@ return(
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav right className='mb-2 mb-lg-0'>
               <MDBNavbarItem active >
-                <MDBNavbarLink aria-current='page' href='#'> Home
+                <MDBNavbarLink aria-current='page' href='./'> Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Favorite</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='./favDeals'>Deal List</MDBNavbarLink>
+                <MDBNavbarLink href='./FavDeals'>Deals List</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='./News'>News </MDBNavbarLink>
@@ -59,4 +54,4 @@ return(
 )
 
 }
-export default NavBars;
+export default NavBar;

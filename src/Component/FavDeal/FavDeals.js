@@ -62,8 +62,9 @@ export default function FavDeals(props) {
 
   return (
     <>
+    
       <NavBar />
-      <h1 style={{ padding: "55px", color: "white" }} className="heading">Favorite Deals List</h1>
+      <h1 style={{ padding: "55px", color: "black" }} className="heading">Favorite Deals List</h1>
 
       {/* <div className="cardGrid"> */}
       <div class="content"> 
@@ -138,6 +139,7 @@ export default function FavDeals(props) {
 
 
   <a class="cards" href="#!">
+
     <div class="front" >
       <img src={item.thumb}></img>
     </div>

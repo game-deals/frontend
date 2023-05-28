@@ -22,7 +22,7 @@ function Poster (){
 
         <div
         className='p-5 text-center bg-image'
-        style={{ backgroundImage: "url('https://wallpapercave.com/uwp/uwp3536518.jpeg')", height: "600px" , width: "100%",  }}
+        style={{ backgroundImage: "url('https://wallpapercave.com/uwp/uwp3536518.jpeg')", height: "800px" , width: "100%",  }}
        
       >
         <Image src='./Assets/Header.jpeg'></Image>

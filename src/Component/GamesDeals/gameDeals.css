@@ -8,22 +8,24 @@
 }
 
 
+#Deals{
+  text-align: center;
+  color: white;
+}
 
 #div-All-deals{
 width: 100%;
-margin: auto; 
-background-image: url('https://img.freepik.com/premium-photo/video-game-console-controller-with-neon-colors-led-lights-gamer-video-game-player-leisure-digital-entertainment-created-with-generative-ai-technology_27525-19331.jpg?w=1060');
+padding: 15px; 
+background-image: url('https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg?w=996&t=st=1685292678~exp=1685293278~hmac=af5d88d2d40723804e0c3b97ad379b10970b74339bb7448f51717ff4e1c6903a');
 ; 
 background-size: 100% 100%;
 background-repeat: no-repeat; /* Do not repeat the image */
 }
 .div-card{
-  transition: translateY(-5%);
-width: 100%;
-
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+
 }
 .card {
   width: 300px;
@@ -31,7 +33,7 @@ justify-content: center;
   perspective: 2500px;
   margin: 20px;
   padding: 0px;
-    background: linear-gradient( rgb(16, 17, 24),rgb(64, 63, 63),rgb(194, 191, 191) )
+    background: linear-gradient( rgb(16, 17, 24),rgb(213, 211, 211),rgb(194, 191, 191) )
 
 }
 

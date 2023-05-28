@@ -76,7 +76,7 @@ return (
 {gamesdata.map((item, index) => {
   let urlsteam = `http://store.steampowered.com/app/${item.steamAppID}/`
    let url =`/${item.title}`
-  if (index < 25 && index !=0 && index!=11) {
+  if (index < 26 && index !=0 && index!=11) {
     return (
       <Card className="card" key={index}  > 
       <Link to={urlsteam} variant='white'  style={{  width: "100%", padding: 0 }} >

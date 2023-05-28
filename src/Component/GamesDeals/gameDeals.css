@@ -10,29 +10,36 @@
 
 
 #div-All-deals{
-width: 80%;
-
-margin: auto;
+width: 100%;
+margin: auto; 
+background-image: url('https://img.freepik.com/premium-photo/video-game-console-controller-with-neon-colors-led-lights-gamer-video-game-player-leisure-digital-entertainment-created-with-generative-ai-technology_27525-19331.jpg?w=1060');
+; 
+background-size: 100% 100%;
+background-repeat: no-repeat; /* Do not repeat the image */
 }
 .div-card{
   transition: translateY(-5%);
 width: 100%;
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 .card {
-  width: var(--card-width);
-  height: var(--card-height);
+  width: 300px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   perspective: 2500px;
   margin: 20px;
+  padding: 0px;
+    background: linear-gradient( rgb(16, 17, 24),rgb(64, 63, 63),rgb(194, 191, 191) )
+
+}
+
+#news:hover{
+color: rgb(214, 213, 212);
 }
 
 
-.cover-image {
-  width: 100%;
-  height: 300px;
-}
 
 .wrapper {
   transition: all 0.5s;
@@ -89,6 +96,7 @@ width: 100%;
 .title {
   width: 100%;
   transition: transform 0.5s;
+  color: white;
 }
 .card:hover .title {
   transform: translate3d(0px, 10px, 50px);

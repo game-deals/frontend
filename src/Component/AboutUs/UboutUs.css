@@ -16,7 +16,6 @@
   width: 240px;
 }
 .container {
-  border-radius: 50%;
   height: 112px;
   -webkit-tap-highlight-color: transparent;
   transform: scale(0.48);
@@ -44,7 +43,6 @@
 }
 .circle {
   background-color: #fee7d3;
-  border-radius: 50%;
   cursor: pointer;
   height: 380px;
   left: 10px;

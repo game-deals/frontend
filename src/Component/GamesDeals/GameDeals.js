@@ -6,7 +6,7 @@ import { useEffect,useState } from "react";
 import axios from 'axios';
 import ModalGames from '../ModalGames/ModalGames';
 import { Link } from 'react-router-dom';
-import { BsFillBookmarkStarFill} from "react-icons/bs";
+import { BsFillArrowUpCircleFill, BsFillBookmarkStarFill} from "react-icons/bs";
 
 export default function GameDeals() {
   const [gamesdata,setgamessdata]=useState([]);
@@ -71,8 +71,10 @@ const handleImageClick = (item) => {
 
 return (
   <div id='div-All-deals'>
-    <h1 id='Deals'>Best Deals</h1>
-    <div className='div-card' >
+    <h2 id='Deals'>Best Deals</h2>
+    <div className='div-card' > 
+       
+
 {gamesdata.map((item, index) => {
   let urlsteam = `http://store.steampowered.com/app/${item.steamAppID}/`
    let url =`/${item.title}`
@@ -105,6 +107,9 @@ return (
   }
 })}
 </div>
+<div style={{display:"flex",flexDirection:"row-reverse" , paddingLeft:"500px"}}>
+  <a href='#btn-show'><BsFillArrowUpCircleFill  style={{ width:"50px", height:"100px",color:"white"}}/></a></div>
+
     <ModalGames showFlag={showFlag} clickedgames={clickedgames} handleClose={handleClose}/>
   </div >
 );

@@ -137,7 +137,7 @@ export default function FavDeals(props) {
             
 
 
-  <a class="card" href="#!">
+  <a class="cards" href="#!">
     <div class="front" >
       <img src={item.thumb}></img>
     </div>

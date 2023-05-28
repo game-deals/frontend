@@ -194,7 +194,7 @@ img {
 a {
   color: inherit;
 }
-.cardGrid {
+.cardsGrid {
  
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -205,11 +205,11 @@ a {
 
 
 /* 
- .mdCard{
+ .mdcards{
     background: linear-gradient(180.3deg, rgba(221, 221, 221, 0.596) 5.5%, rgba(110, 136, 161, 0.548) 90.2%);
     width: 100%;
 }
-.cardd{
+.cardsd{
   width: 100%;
   background-color: rgb(55, 66, 66);
 } */
@@ -220,9 +220,9 @@ a {
   background-color: aliceblue;
   
   }
-  .card {
-    width: var(--card-width);
-    height: var(--card-height);
+  .cards {
+    width: var(--cards-width);
+    height: var(--cards-height);
     position: relative;
     display: flex;
     justify-content: center;
@@ -278,21 +278,8 @@ a {
     box-sizing: border-box;
   }
   
-  html {
-    font-size: 18px;
-    line-height: 1.5;
-    font-weight: 300;
-    color: #333;
-    font-family: "Nunito Sans", sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color: #ecf0f9;
-    background-attachment: fixed;
-  }
+ 
+
   
   .content {
     display: flex;
@@ -332,7 +319,7 @@ a {
     margin-bottom: 3rem;
   }
   
-  .card {
+  .cards {
     color: inherit;
     cursor: pointer;
     width: calc(33% - 2rem);
@@ -344,12 +331,12 @@ a {
     position: relative;
   }
   @media screen and (max-width: 800px) {
-    .card {
+    .cards {
       width: calc(50% - 2rem);
     }
   }
   @media screen and (max-width: 500px) {
-    .card {
+    .cards {
       width: 100%;
     }
   }
@@ -389,14 +376,14 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #bdbed3, #e2e5eb);
+    background: linear-gradient(135deg, white, #000000);
     opacity: 0.25;
     z-index: -1;
   }
-  .card:hover .front {
+  .cards:hover .front {
     transform: rotateY(180deg);
   }
-  .card:nth-child(even):hover .front {
+  .cards:nth-child(even):hover .front {
     transform: rotateY(-180deg);
   }
   
@@ -412,20 +399,20 @@ a {
     box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
     background-color: rgba(26, 87, 230, 0.25);
   }
-  .card:hover .back {
+  .cards:hover .back {
     transform: rotateY(0deg);
   }
-  .card:nth-child(even) .back {
+  .cards:nth-child(even) .back {
     transform: rotateY(180deg);
   }
-  .card:nth-child(even) .back .button {
+  .cards:nth-child(even) .back .button {
     background: linear-gradient(135deg, #e61a80, #e61a3c);
   }
-  .card:nth-child(even) .back .button:before {
+  .cards:nth-child(even) .back .button:before {
     box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
     background-color: rgba(230, 26, 60, 0.25);
   }
-  .card:nth-child(even):hover .back {
+  .cards:nth-child(even):hover .back {
     transform: rotateY(0deg);
   }
   

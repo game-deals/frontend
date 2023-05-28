@@ -1,0 +1,17 @@
+
+#header{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(18, 18, 18) ;
+    color: aliceblue;
+    width: 100%;
+    padding: 20px;
+  align-items: center;
+}
+
+#sub-header{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+}

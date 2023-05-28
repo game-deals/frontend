@@ -1,5 +1,4 @@
 
-import './news.css';
 import { useEffect, useState } from 'react';
 import { CardGroup } from 'react-bootstrap';
 import { MDBCard, MDBCardImage, MDBCardOverlay, MDBCardText, MDBCardTitle} from 'mdb-react-ui-kit';
@@ -15,6 +14,7 @@ function News (props){
 
   const param = useParams();
 const title = param.title;
+
   const getAllMovies = () => {
     const serverURL = `http://localhost:3005/trendingNews/${title}`;
 
@@ -22,15 +22,17 @@ const title = param.title;
     fetch(serverURL)
         .then(response => {
             response.json().then(data => {
-           
-                setMoviesData(data)
-               
 
+                setMoviesData(data)
+        
+        
+          
             })
         })
 }
 
-     
+       
+
 useEffect(()=>{
     getAllMovies()
 },[])

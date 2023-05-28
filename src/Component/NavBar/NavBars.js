@@ -49,7 +49,7 @@ return(
                 <MDBNavbarLink href='./News'>News </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>About Us </MDBNavbarLink>
+                <MDBNavbarLink href='/AboutUs'>About Us </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>

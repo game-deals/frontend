@@ -66,21 +66,23 @@ const handleImageClick = (item) => {
   // You can set the clicked image in the state or perform any other action you want.
   console.log("Clicked image:", item);
 }
+
 return (
   <div id='div-All-deals'>
     <h1 id='Deals' style={{ display: "flex", alignItems: "center", color: "black" , padding:"20px" , alignItems:"center"}}>Best Deals</h1>
     <div className='div-card' style={{ display: "flex", flexWrap: "wrap" , justifyContent:"center" }}>
 {gamesdata.map((item, index) => {
-  if (index < 15 && index !=0 && index!=11) {
+   let url =`/${item.title}`
+  if (index < 25 && index !=0 && index!=11) {
     return (
-
+     
       <Card className="card" key={index}>
-      <Button variant='white' className="wrapper" style={{  width: "100%", padding: 0 }} onClick={() => { handleImageClick(item) }}>
+      <Link to={url} variant='white' className="wrapper" style={{  width: "100%", padding: 0 }} onClick={() => { handleImageClick(item) }}>
 
         <div className="wrapper">
         <Card.Img  variant="top" src={item.thumb} className="cover-image" />
         </div>
-        </Button>
+        </Link>
 
         <Card.Body style={{ display: "flex", flexDirection: "column" }}>
           <Card.Title className='title'>{item.title}</Card.Title>

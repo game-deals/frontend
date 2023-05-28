@@ -19,22 +19,24 @@ function NavBars() {
 return(
 
 
-< div >
-<MDBNavbar className='navv' expand='lg' light bgColor='white' style={{display:"flex" ,gap:"10px",justifyContent:"space-around" ,fontSize:"20px" }}>
-        <MDBContainer  fluid  >
-        <MDBNavbarBrand href='/'>Games Deal</MDBNavbarBrand>
-          <MDBNavbarToggler
+< div  >
+      <MDBNavbar className='navv' expand='lg' light bgColor='white' style={{width:"100%"}} >
+        <MDBContainer fluid style={{display:"flex"  ,fontSize:"20px", width:"100%"  }}  >
+        <h1 style={{color:"rgb(104, 103, 103)"}}>Gamer</h1>
+
+        <MDBNavbarBrand style={{marginLeft:"500px"}} href='/'></MDBNavbarBrand>
+          <MDBNavbarToggler 
             onClick={() => setShowBasic(!showBasic)}
             aria-controls='navbarExample01'
             aria-expanded='false'
             aria-label='Toggle navigation'
           >
             <MDBIcon fas icon='bars' />
-          </MDBNavbarToggler>
+          </MDBNavbarToggler >
           <MDBCollapse navbar show={showBasic}>
-            <MDBNavbarNav right className='mb-2 mb-lg-0'>
+            <MDBNavbarNav   right className='mb-4 mb-lg-0'>
               <MDBNavbarItem active >
-                <MDBNavbarLink aria-current='page' href='/'> Home
+                <MDBNavbarLink  aria-current='page' href='/'> Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
@@ -47,7 +49,7 @@ return(
                 <MDBNavbarLink href='./News'>News </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>About Us </MDBNavbarLink>
+                <MDBNavbarLink href='/AboutUs'>About Us </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>

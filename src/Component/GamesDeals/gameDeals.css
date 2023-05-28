@@ -1,30 +1,47 @@
 
 :root {
   --card-height: 300px;
-  --card-width: calc(var(--card-height) / 1.5);
+  --card-width: 200px
 }
 * {
   box-sizing: border-box;
 }
 
 
-.card {
-  width: var(--card-width);
-  height: var(--card-height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 2500px;
-  margin: 20px;
+#Deals{
+  text-align: center;
+  color: white;
 }
 
+#div-All-deals{
+width: 100%;
+padding: 15px; 
+background-image: url('https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg?w=996&t=st=1685292678~exp=1685293278~hmac=af5d88d2d40723804e0c3b97ad379b10970b74339bb7448f51717ff4e1c6903a');
+; 
+background-size: 100% 100%;
+background-repeat: no-repeat; /* Do not repeat the image */
+}
 .div-card{
-  transition: translateY(-5%)
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
 }
-.cover-image {
-  width: 100%;
-  height: 300px;
+.card {
+  width: 300px;
+  display: flex;
+  perspective: 2500px;
+  margin: 20px;
+  padding: 0px;
+    background: linear-gradient( rgb(16, 17, 24),rgb(213, 211, 211),rgb(194, 191, 191) )
+
 }
+
+#news:hover{
+color: rgb(214, 213, 212);
+}
+
+
 
 .wrapper {
   transition: all 0.5s;
@@ -81,6 +98,7 @@
 .title {
   width: 100%;
   transition: transform 0.5s;
+  color: white;
 }
 .card:hover .title {
   transform: translate3d(0px, 10px, 50px);

@@ -7,14 +7,14 @@ import axios from 'axios';
 function ModalGamesUpdate(props){
 
 
-    const AddComment=  (e) =>{
+    const AddComment= async  (e) =>{
  e.preventDefault();
         const obj = {
            comment: e.target.comment.value,
         }
       console.log("update obj",obj);
         const serverURL = `http://localhost:3005/update/${props.clickedgames.id}`;
-       const result= axios.put(serverURL ,obj )
+       const result= await axios.put(serverURL ,obj )
         .then(response=>{
             console.log(response.data)
             props.allFavData(result.data)

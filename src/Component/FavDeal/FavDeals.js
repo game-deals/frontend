@@ -67,10 +67,9 @@ const handleClose = () => {
   // const closeUpdModal=()=>{
   //   setUpdModal(false);
   // }
-  getFavGame();
 
   useEffect(() => {
-
+    getFavGame();
 setgamessdata(favArrGame)
   },[favArrGame] );
 
@@ -99,7 +98,7 @@ setgamessdata(favArrGame)
       //   </div>
       // </div>
       
-      <div className="nft">
+      <div className="nft" key={item.gameID}>
       <div className='main'>
       <Link to="" className="hero-image-container">
         <img class="hero-image" src={item.thumb} height="250px"width="250px" alt="Spinning glass cube"/>
@@ -109,11 +108,11 @@ setgamessdata(favArrGame)
         <div className='tokenInfo'>
           <div className="price">
           Watch: 
-            {item.steamRatingCount}
+            {item.steamratingcount}
           </div>
           <div className="">
             <ins>Rating: </ins>
-            {item.steamRatingPercent+"%"}
+            {item.steamratingpercent+"%"}
           </div>
         </div>
         <hr />

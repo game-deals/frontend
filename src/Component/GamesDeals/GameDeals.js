@@ -67,80 +67,82 @@ const handleImageClick = (item) => {
   console.log("Clicked image:", item);
 }
 return (
-  <>
+  <div id='div-All-deals'>
     <h1 id='Deals' style={{ display: "flex", alignItems: "center", color: "black" , padding:"20px" , alignItems:"center"}}>Best Deals</h1>
-    <div className="cardGrid">
-  {gamesdata.map((item,index) => {
-    
-    if(index<10){
+    <div className='div-card' style={{ display: "flex", flexWrap: "wrap" , justifyContent:"center" }}>
+{gamesdata.map((item, index) => {
+  if (index < 15 && index !=0 && index!=11) {
     return (
-      // <div className="cardCon">
-      //   <div className="cardd">
-      //     <MDBCard className="mdCard">
-      //       <MDBCardImage src={item.thumb} position="top" alt="..." g />
-      //       <MDBCardBody className="cardd">
-      //         <MDBCardTitle>{item.title}</MDBCardTitle>
-      //         <MDBCardText>{item.steamratingcount}</MDBCardText>
-      //         <MDBCardText>
-      //           steam rating percent: {item.steamratingpercent + "%"}
-      //         </MDBCardText>
-      //         <MDBCardText>{item.comment}</MDBCardText>
-      //         <MDBBtn href="#">Button</MDBBtn>
-      //       </MDBCardBody>
-      //     </MDBCard>
-      //   </div>
-      // </div>
-      
-      <div className="nft">
-      <div className='main'>
-         <Button variant='white'  style={{ width: "100%", padding: 0 }} onClick={() => { handleImageClick(item) }}>
 
-         <div > 
-                <Card.Img variant="top" src={item.thumb} className="cover-image" />
-                </div>   </Button>
-      
-        {/* <img class="hero-image" src={item.thumb} height="250px"width="250px" alt="Spinning glass cube"/> */}
-        <h2>{item.title}</h2>
-        
-          <Button variant="dark" onClick={() => { addToFav(item); handleShow(item) }}>Add to Favorite</Button>
+      <Card className="card" key={index}>
+      <Button variant='white' className="wrapper" style={{  width: "100%", padding: 0 }} onClick={() => { handleImageClick(item) }}>
 
-      </div>
-    </div>
-    
-    )}else {
-      return null}
+        <div className="wrapper">
+        <Card.Img  variant="top" src={item.thumb} className="cover-image" />
+        </div>
+        </Button>
 
-  })}
-  </div>
+        <Card.Body style={{ display: "flex", flexDirection: "column" }}>
+          <Card.Title className='title'>{item.title}</Card.Title>
+          <Card.Text></Card.Text>
+          <div style={{ marginTop: "auto" }}>
+            <Button variant="dark" onClick={() => { addToFav(item); handleShow(item) }}>Add to Favorite</Button>
+          </div>
+        </Card.Body>
+      </Card>
+    );
+  } else {
+    return null;
+  }
+})}
+</div>
     <ModalGames showFlag={showFlag} clickedgames={clickedgames} handleClose={handleClose}/>
-  </>
+  </div >
 );
 }
 
-// <div className='div-card' style={{ display: "flex", flexWrap: "wrap" , justifyContent:"center" }}>
-// {gamesdata.map((item, index) => {
-//   if (index < 14) {
+
+
+// <div className="cardGrid">
+//   {gamesdata.map((item,index) => {
+    
+//     if(index<10){
 //     return (
+//       // <div className="cardCon">
+//       //   <div className="cardd">
+//       //     <MDBCard className="mdCard">
+//       //       <MDBCardImage src={item.thumb} position="top" alt="..." g />
+//       //       <MDBCardBody className="cardd">
+//       //         <MDBCardTitle>{item.title}</MDBCardTitle>
+//       //         <MDBCardText>{item.steamratingcount}</MDBCardText>
+//       //         <MDBCardText>
+//       //           steam rating percent: {item.steamratingpercent + "%"}
+//       //         </MDBCardText>
+//       //         <MDBCardText>{item.comment}</MDBCardText>
+//       //         <MDBBtn href="#">Button</MDBBtn>
+//       //       </MDBCardBody>
+//       //     </MDBCard>
+//       //   </div>
+//       // </div>
+      
+//       <div className="nft">
+//       <div className='main'>
+//          <Button variant='white'  style={{ width: "100%", padding: 0 }} onClick={() => { handleImageClick(item) }}>
 
-//       <Card className="card" key={index}>
-//       <Button variant='white' className="wrapper" style={{  width: "100%", padding: 0 }} onClick={() => { handleImageClick(item) }}>
+//          <div > 
+//                 <Card.Img variant="top" src={item.thumb} className="cover-image" />
+//                 </div>   </Button>
+                
+//         {/* <img class="hero-image" src={item.thumb} height="250px"width="250px" alt="Spinning glass cube"/> */}
+//         <h2>{item.title}</h2>
+        
+//           <Button variant="dark" onClick={() => { addToFav(item); handleShow(item) }}>Add to Favorite</Button>
 
-//         <div className="wrapper">
-//         <Card.Img  variant="top" src={item.thumb} className="cover-image" />
-//         </div>
-//         </Button>
+//       </div>
+//     </div>
+    
+//     )}else {
+//       return null}
 
-//         <Card.Body style={{ display: "flex", flexDirection: "column" }}>
-//           <Card.Title className='title'>{item.title}</Card.Title>
-//           <Card.Text></Card.Text>
-//           <div style={{ marginTop: "auto" }}>
-//             <Button variant="dark" onClick={() => { addToFav(item); handleShow(item) }}>Add to Favorite</Button>
-//           </div>
-//         </Card.Body>
-//       </Card>
-//     );
-//   } else {
-//     return null;
-//   }
-// })}
-// </div>
+//   })}
+//   </div>

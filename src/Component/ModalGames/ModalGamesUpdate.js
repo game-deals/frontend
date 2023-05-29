@@ -4,6 +4,7 @@ import Image from 'react-bootstrap/Image'
 import Form from 'react-bootstrap/Form';
 
 import axios from 'axios';
+import './Modal.css'
 function ModalGamesUpdate(props){
 
 
@@ -27,11 +28,11 @@ function ModalGamesUpdate(props){
     }
     return(
         <>
-        <Modal show={props.showFlag} onHide={props.handleClose} >
-                <Modal.Header closeButton>
+        <Modal centered  size="sm"  className="custom-modal"  show={props.showFlag} onHide={props.handleClose} >
+                <Modal.Header  className='.modal-header' closeButton>
                     <Modal.Title>{props.clickedgames.title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className='modal-body'>
                     <Image src={props.clickedgames.thumb} width='100%'></Image>
                    
                     <Form onSubmit={AddComment} >
@@ -41,7 +42,7 @@ function ModalGamesUpdate(props){
                             <Form.Control name="comment" type="text" />
                         </Form.Group>
                       
-                        <Button variant="primary" type="submit">Submit</Button>
+                        <Button variant="dark" type="submit">Submit</Button>
                     </Form>
     
                 </Modal.Body>

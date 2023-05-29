@@ -296,3 +296,15 @@ a {
 }
 
 
+.category{
+  display: flex;
+  width: 100%;
+  gap:"50px";
+  flex-wrap: wrap;
+
+}
+.btn-category{
+  margin: 12px;
+  border-radius: 5%;
+
+}

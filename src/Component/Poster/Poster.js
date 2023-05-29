@@ -46,7 +46,7 @@ style={{width:"40%" ,marginRight: "auto"} }
     </MDBCarousel>
 
     <div id='sub-poster'>
-     <h3 >BLACK OPS III
+     <h3 style={{color:"white"}}>BLACK OPS III
 </h3>
      <h4 > Welcome to 2065. A new breed of Black Ops soldier emerges and the lines are blurred between our own humanity and the cutting-edge military robotics that define the future of combat.</h4>
     <Link to="https://store.steampowered.com/app/311210/Call_of_Duty_Black_Ops_III/">

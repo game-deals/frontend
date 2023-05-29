@@ -70,7 +70,7 @@ export default function FavDeals(props) {
 
 
       <div id='div-All-deals'>
-    <h2 id='Deals'>Best Deals</h2>
+    <h2 id='Deals'>Favorite Deals</h2>
     <div className='div-card' > 
        
     
@@ -83,7 +83,7 @@ export default function FavDeals(props) {
       <Card className="card" key={index}  > 
       <Link to={urlsteam} variant='white'  style={{  width: "100%", padding: 0 }} >
         <div >      
-        <Card.Img className="wrapper"  src={item.thumb}  />
+        <Card.Img   src={item.thumb}  />
         </div>
         </Link>
         <Card.Body >
@@ -91,16 +91,18 @@ export default function FavDeals(props) {
           <Card.Title className='title'><h4 style={{color:"black",fontFamily:"Roboto, sans-serif;",fontSize:"22px",fontWeight:"bold"}}>{item.title}</h4></Card.Title>
 
 
-          <Link   to={url} variant='white' style={{ marginTop:"auto",color:"black",fontFamily:"Roboto, sans-serif;",fontSize:"22px",fontWeight:"bold",textDecoration:"none"}}>
+          <Link   to={url} variant='white' style={{ color:"black",fontFamily:"Roboto, sans-serif;",fontSize:"22px",fontWeight:"bold",textDecoration:"none"}}>
 <Card.Text style={{display:"flex"}}>Rivew: {item.comment}</Card.Text>
 
 </Link>
+<br/>
 </div>
            
-          <div   style={{ display:"flex" ,height:"50px",gap:"15px", marginLeft:"22%",marginTop:"20px"  }}>
-            <Button  variant="dark" onClick={() => { handleShow(item) }}>Update  
+          <div   style={{ display:"flex" ,gap:"15px" , width:"100%"
+        }}>
+            <Button style={{marginLeft:"auto" , marginTop:"auto"}}  variant="dark" onClick={() => { handleShow(item) }}>Update  
 </Button>
-<Button
+<Button 
              variant="danger"
              onClick={() => {
                deleteFavGame(item);

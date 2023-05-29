@@ -36,7 +36,7 @@ function News() {
   return (
     <>
       <NavBars />
-      <Header/>
+    
       {moviesdata.map((item, index) => {
         if (!item.urlToImage) {
           return null;

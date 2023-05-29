@@ -1,8 +1,7 @@
 #poster{
-    width: 100;
+    width: 100%;
     border-radius: 0;
     padding: 40px;
-
     background-image: url('https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg?w=996&t=st=1685292678~exp=1685293278~hmac=af5d88d2d40723804e0c3b97ad379b10970b74339bb7448f51717ff4e1c6903a');
 background-size: 100% 100%; 
 display: flex;

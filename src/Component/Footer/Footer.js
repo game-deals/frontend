@@ -13,7 +13,7 @@ export default function Footer() {
   return (
 
     <div style={{width:"100%"}} >
-<MDBFooter style={{padding:"20px" }} className='bg-dark text-center text-white'>
+<MDBFooter style={{padding:"20px",position:"sticky",width:"100%",bottom:"0"}} className='bg-dark text-center text-white'>
           <MDBBtn   outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon  fab icon='facebook-f' />
           </MDBBtn>
@@ -45,7 +45,7 @@ export default function Footer() {
         
       </div>
     </MDBFooter>
-   
     </div>
+   
   );
 }

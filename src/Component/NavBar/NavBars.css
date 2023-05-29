@@ -1,0 +1,11 @@
+.navs:hover {
+    background-color: rgba(255, 255, 255, 0.093);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box-shadow on hover */
+    transition: background-color 0.3s ease; /* Apply a smooth transition effect */
+  }
+
+  
+
+.nav{
+    color: white;
+}

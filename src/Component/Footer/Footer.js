@@ -39,6 +39,7 @@ export default function Footer() {
           
         </section>
 
+
         <section className='mb-4'>
           <p>
           We thank ASAC for given us  the opportunities in this course to make this Website .
@@ -79,5 +80,6 @@ export default function Footer() {
       </div>
     </MDBFooter>
     </div>
+   
   );
 }

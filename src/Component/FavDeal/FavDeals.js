@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import NavBar from "../NavBar/NavBars";
 import { Link } from "react-router-dom";
 import ModalGamesUpdate from "../ModalGames/ModalGamesUpdate";
+import { Card } from "react-bootstrap";
 
 export default function FavDeals(props) {
   
@@ -64,136 +65,80 @@ export default function FavDeals(props) {
     <>
     
       <NavBar />
-      <h1 style={{ padding: "55px", color: "black" }} className="heading">Favorite Deals List</h1>
-
-      {/* <div className="cardGrid"> */}
-      <div class="content"> 
-        {gamesdata.map((item) => {
-          return (
-            // <div className="cardCon">
-            //   <div className="cardd">
-            //     <MDBCard className="mdCard">
-            //       <MDBCardImage src={item.thumb} position="top" alt="..." g />
-            //       <MDBCardBody className="cardd">
-            //         <MDBCardTitle>{item.title}</MDBCardTitle>
-            //         <MDBCardText>{item.steamratingcount}</MDBCardText>
-            //         <MDBCardText>
-            //           steam rating percent: {item.steamratingpercent + "%"}
-            //         </MDBCardText>
-            //         <MDBCardText>{item.comment}</MDBCardText>
-            //         <MDBBtn href="#">Button</MDBBtn>
-            //       </MDBCardBody>
-            //     </MDBCard>
-            //   </div>
-            // </div>
-
-            // <div className="nft" key={item.gameID}>
-            //   <div className="main">
-            //     <Link to="" className="hero-image-container">
-            //       <img
-            //         class="hero-image"
-            //         src={item.thumb}
-            //         height="250px"
-            //         width="250px"
-            //         alt="Spinning glass cube"
-            //       />
-            //     </Link>
-            //     <h2>{item.title}</h2>
-
-            //     <div className="tokenInfo">
-            //       <div className="price">
-            //         Watch:
-            //         {item.steamratingcount}
-            //       </div>
-            //       <div className="">
-            //         <ins>Rating: </ins>
-            //         {item.steamratingpercent + "%"}
-            //       </div>
-            //     </div>
-            //     <hr />
-            //     <div>
-            //       <span style={{ fontWeight: "bold" }}>Review: </span>
-            //       {item.comment}
-            //     </div>
-            //     <hr />
-            //     <Button
-            //       variant="dark"
-            //       onClick={() => {
-            //         handleShow(item);
-            //       }}
-            //     >
-            //       Update
-            //     </Button>
-            //     <br />
-            //     <Button
-            //       variant="outline-danger"
-            //       onClick={() => {
-            //         deleteFavGame(item);
-            //       }}
-            //     >
-            //       Delete
-            //     </Button>
-            //   </div>
-            // </div>
-            
 
 
-  <a class="cards" href="#!">
 
-    <div class="front" >
-      <img src={item.thumb}></img>
-    </div>
-    <div class="back">
-      <div>
-      <h3>{item.title}</h3>
-      <div className="tokenInfo">
-                   <div className="price">
-                    Watch:
-                  {item.steamratingcount}
-                   </div>
-                   <div className="">
-                     <ins>Rating: </ins>
-                     {item.steamratingpercent + "%"}
-                   </div>
-                 </div>
-                <hr />
-                 <div>
-                   <span style={{ fontWeight: "bold" }}>Review: </span>
-                   {item.comment}
-                 </div>
-        <Button style={{margin:"5px"}}
-                   variant="dark"
-                   onClick={() => {
-                     handleShow(item);
-                   }}
-                 >
-                   Update
-                 </Button>
-               <br />
-                 <Button
-                   variant="outline-danger"
-                   onClick={() => {
-                     deleteFavGame(item);
-                   }}
-                 >
-                   Delete
-                 </Button>
-      </div>
-    </div></a>
-   
 
-          );
-        })}
+      <div id='div-All-deals'>
+    <h2 id='Deals'>Best Deals</h2>
+    <div className='div-card' > 
+       
+    
+
+{gamesdata.map((item, index) => {
+  let urlsteam = `http://store.steampowered.com/app/${item.steamAppID}/`
+   let url =`/${item.title}`
+  if (index < 26 && index !=0 && index!=11) {
+    return (
+      <Card className="card" key={index}  > 
+      <Link to={urlsteam} variant='white'  style={{  width: "100%", padding: 0 }} >
+        <div >      
+        <Card.Img className="wrapper"  src={item.thumb}  />
         </div>
-  {/* </div> */}
+        </Link>
+        <Card.Body >
+                 <div style={{display:"flex",flexDirection:"column" ,gap:"10px"}}  >
+          <Card.Title className='title'><h4 style={{color:"black",fontFamily:"Roboto, sans-serif;",fontSize:"22px",fontWeight:"bold"}}>{item.title}</h4></Card.Title>
+
+
+          <Link   to={url} variant='white' style={{ marginTop:"auto",color:"black",fontFamily:"Roboto, sans-serif;",fontSize:"22px",fontWeight:"bold",textDecoration:"none"}}>
+<Card.Text style={{display:"flex"}}>Rivew: {item.comment}</Card.Text>
+
+</Link>
+</div>
+           
+          <div   style={{ display:"flex" ,height:"50px",gap:"15px", marginLeft:"22%",marginTop:"20px"  }}>
+            <Button  variant="dark" onClick={() => { handleShow(item) }}>Update  
+</Button>
+<Button
+             variant="danger"
+             onClick={() => {
+               deleteFavGame(item);
+             }}
+           >
+             Delete
+           </Button>
+           
+
+
+          </div>
+        </Card.Body>
+
+      </Card>
+    );
+  } else {
+    return null;
+  }
+})}
+</div>
+
+
+  </div >
+
+
+
+
+
+
+
       <ModalGamesUpdate
         showFlag={showFlag}
         clickedgames={clickedgames}
         handleClose={handleClose}
         allFavData={allFavData}
       />
-
-      <Footer />
+  
+  <Footer  />
     </>
   );
 }
@@ -204,3 +149,136 @@ updateModalll={show}
 closeUpdModal={closeUpdModal}
 clickedMovie={clickedMovie}/> */
 }
+
+
+
+
+
+
+
+
+
+
+
+// <h1 style={{ padding: "55px", color: "black" }} className="heading">Favorite Deals List</h1>
+
+// {/* <div className="cardGrid"> */}
+// <div class="content"> 
+//   {gamesdata.map((item) => {
+//     return (
+      // <div className="cardCon">
+      //   <div className="cardd">
+      //     <MDBCard className="mdCard">
+      //       <MDBCardImage src={item.thumb} position="top" alt="..." g />
+      //       <MDBCardBody className="cardd">
+      //         <MDBCardTitle>{item.title}</MDBCardTitle>
+      //         <MDBCardText>{item.steamratingcount}</MDBCardText>
+      //         <MDBCardText>
+      //           steam rating percent: {item.steamratingpercent + "%"}
+      //         </MDBCardText>
+      //         <MDBCardText>{item.comment}</MDBCardText>
+      //         <MDBBtn href="#">Button</MDBBtn>
+      //       </MDBCardBody>
+      //     </MDBCard>
+      //   </div>
+      // </div>
+
+      // <div className="nft" key={item.gameID}>
+      //   <div className="main">
+      //     <Link to="" className="hero-image-container">
+      //       <img
+      //         class="hero-image"
+      //         src={item.thumb}
+      //         height="250px"
+      //         width="250px"
+      //         alt="Spinning glass cube"
+      //       />
+      //     </Link>
+      //     <h2>{item.title}</h2>
+
+      //     <div className="tokenInfo">
+      //       <div className="price">
+      //         Watch:
+      //         {item.steamratingcount}
+      //       </div>
+      //       <div className="">
+      //         <ins>Rating: </ins>
+      //         {item.steamratingpercent + "%"}
+      //       </div>
+      //     </div>
+      //     <hr />
+      //     <div>
+      //       <span style={{ fontWeight: "bold" }}>Review: </span>
+      //       {item.comment}
+      //     </div>
+      //     <hr />
+      //     <Button
+      //       variant="dark"
+      //       onClick={() => {
+      //         handleShow(item);
+      //       }}
+      //     >
+      //       Update
+      //     </Button>
+      //     <br />
+      //     <Button
+      //       variant="outline-danger"
+      //       onClick={() => {
+      //         deleteFavGame(item);
+      //       }}
+      //     >
+      //       Delete
+      //     </Button>
+      //   </div>
+      // </div>
+      
+
+
+{/* <a class="cards" href="#!">
+
+<div class="front" >
+<img src={item.thumb}></img>
+</div>
+<div class="back">
+<div>
+<h3>{item.title}</h3>
+<div className="tokenInfo">
+             <div className="price">
+              Watch:
+            {item.steamratingcount}
+             </div>
+             <div className="">
+               <ins>Rating: </ins>
+               {item.steamratingpercent + "%"}
+             </div>
+           </div>
+          <hr />
+           <div>
+             <span style={{ fontWeight: "bold" }}>Review: </span>
+             {item.comment}
+           </div>
+  <Button style={{margin:"5px"}}
+             variant="dark"
+             onClick={() => {
+               handleShow(item);
+             }}
+           >
+             Update
+           </Button>
+         <br />
+           <Button
+             variant="outline-danger"
+             onClick={() => {
+               deleteFavGame(item);
+             }}
+           >
+             Delete
+           </Button>
+</div>
+</div></a>
+
+
+    );
+  })}
+  </div> */}
+{/* </div> */}

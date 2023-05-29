@@ -1,76 +1,85 @@
 import './UboutUs.css';
+import {
+
+  MDBBtn
+} from 'mdb-react-ui-kit';
+
 import { useEffect, useState } from 'react';
 
 import NavBars from '../NavBar/NavBars';
-function AboutUS(){
+function AboutUS() {
 
-    const [moviesdata, setMoviesData] = useState([])
+  const [moviesdata, setMoviesData] = useState([])
 
-    const getAllMovies = () => {
-      const serverURL = `http://localhost:3005/getaboutData`;
-  
-   
-      fetch(serverURL)
-          .then(response => {
-              response.json().then(data => {
-             
-                  setMoviesData(data)
-                 
- 
-              })
-          })
+  const getAllMovies = () => {
+    const serverURL = `http://localhost:3005/getaboutData`;
+
+
+    fetch(serverURL)
+      .then(response => {
+        response.json().then(data => {
+
+          setMoviesData(data)
+
+
+        })
+      })
   }
-  
-       
-  useEffect(()=>{
-      getAllMovies()
-  },[])
-    
-    return(
+
+
+  useEffect(() => {
+    getAllMovies()
+  }, [])
+
+  return (
     <>
-<NavBars />
-
-<div className='bodyAboutUs'> 
-{moviesdata.map(item => {
+      <NavBars />
+      <div id="header">
          
-                return (
          
+          <div id="sub-header">  
+         <h5 style={{color:" #9A9A9A"}}>Games Deal is a price comparison website for digital PC Games. We keep track of prices across multiple stores including Steam,and you can show the news about the games , select a game Favorite and <span style={{color:"white"}}>let's start the first deal.</span>
+          </h5>
+         
+         </div></div>
+        
+      <div className='bodyAboutUs'>
+        {moviesdata.map(item => {
 
-<div class="person">
-<div class="container">
-  <div class="container-inner">
-    <img
-      class="circle"
-      src="https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8&w=1000&q=80" alt="imag"/>
-   
-    <img
-      class="img img1"
-    src={item.src}  alt="personImg" />
-  </div>
-</div>
-<div class="divider"></div>
-<div class="name">{item.name}</div>
-<div class="title">{item.email}</div>
-</div>
-                )
+          return (
 
 
-            })}
+         
+             
+                <div class="divcontenar">
+                 
+                 
+                 <img  class="imgperson"src={item.src}  alt="personImg" /> 
+                    
+                   <p class="name">{item.name}</p>  
+                   <p class="title"> {item.email} </p>  <MDBBtn outline color="light" floating className='m-1' href={item.linkdin} role='button'>
+              <i class="fa-brands fa-linkedin fa-beat"></i>
+          </MDBBtn>
+                </div>
+             
+             
+             
+            
+          
+          )
+
+
+        })}
 
 
 
-           
-    </div>
-    <p className='disc'>
-Welcome to our gaming website! Our platform features the latest and most popular games for players of all ages. With a user-friendly interface, 
-you can easily discover new games and know last news for it
-.Our website is designed to provide a seamless  experience,  You can access our games directly from your browser, anytime and anywhere. 
- Join our community of gamers today and let the fun begin!
-</p>
+
+      </div>
+
     </>
-         
-       
-    )
+
+
+  )
 }
 
 export default AboutUS;

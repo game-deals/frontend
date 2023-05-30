@@ -1,16 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 .bodyAboutUs {
-  align-items: center;
-  
-   
     background-color: rgb(18, 18, 18) ;
-  
   display: flex;
   font-family: "Merriweather", serif;
   flex-wrap: wrap;
   justify-content: center;
-
-  margin: 0;
+  padding-bottom: 20px;
 }
 /* .person {
   align-items: center;
@@ -73,13 +68,17 @@ align-items: center;
 } */
 .divcontenar{
   margin-top:1%;
-  display: flex;
-  width:40%;
-  height:63%;
+  display:flex;
+  width:280px;
+  height:350px;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap ;
-  
+  flex-direction: column;
+  align-items: center;
+  background-color: #5c5858aa;
+  border-radius: 2%;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
 
 }
 /* .img {
@@ -100,13 +99,8 @@ align-items: center;
 } */
 .name {
   color: #fbfcff;
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 500;
- margin-top:0%;
- margin-bottom:0%;
- 
- 
-
 }
 .title {
   color: #6e6e6e;
@@ -124,7 +118,7 @@ i{
   border-radius: 50%;
   transition: transform .2s;
   width:51%;
-  height:60%;
+  height:50%;
 
   
   

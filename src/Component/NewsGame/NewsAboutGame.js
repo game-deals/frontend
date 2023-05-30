@@ -17,8 +17,7 @@ function News() {
   const title = param.title;
 
   const getAllMovies = () => {
-    const serverURL = `http://localhost:3005/trendingNews/${title}`;
-
+    const serverURL = `${process.env.REACT_APP_serverURL}/trendingNews/${title}`;
     fetch(serverURL).then((response) => {
       response.json().then((data) => {
         setMoviesData(data);

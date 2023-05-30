@@ -1,71 +1,73 @@
-# Getting Started with Create React App
+<h1 align="center">Game Deals</h1>
+Pc games are quite expensive, so we will build a website that will show the deals on games. Giving a link to steam to purchase the game as the deal and there will be a favorite list where the user can see the reviews that he wrote and the games he added in this list.
+<hr/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![background](https://cdn.discordapp.com/attachments/1110834927542468648/1113063242420473917/image_1.png)
 
-## Available Scripts
+<hr/>
 
-In the project directory, you can run:
+# 🎮 Features 
 
-### `npm start`
+- Steam : link games with steam once user clicks on it.
+- Store-wise display: games can be sorted by store.
+- Favorite Games: users can bookmark their favorite games for later using.
+- Games NEWS: displays a section for leatest NEWS related about games.
+- Review games: displays a section for review games.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<hr/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 🎮 Technology and Communication
 
-### `npm test`
+Game-Deals is built using the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ReactJS
+- Node.js
+- JS
+- Bootstrap
+- MDB Bootstrap
+- CSS
+- JSON
+- NEWS API
+- Cheapshark API
+- Google API
+- Zoom
+- Discord
+- Slack
 
-### `npm run build`
+<hr/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 🎮 How to Run the Website on Your System
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Step 1: Clone the Code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Firstly, clone the entire website code on your local system.
 
-### `npm run eject`
+## Step 2: Obtain the NEWS API Key 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Before starting the website, you will need to Obtain the NEWS API Key. Follow these steps to obtain them and add them to your `.env` file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ▶️ Get NEWS API Key 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Go to https://newsapi.org/ and log in.
+- In the Home, select "Get API Key" and generate an API key.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Step 3: Run the Website
 
-## Learn More
+Open your code editor (such as VS Code) and navigate to the project directory. Then, open a terminal and run the following command:
+```bash in backend side
+ sqlstart
+```
+```bash
+ nodemon
+```
+```bash in frontend side
+npm start
+```
+This will start the application. Open a web browser and navigate to http://localhost:3000 to access the website.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr/>
 
-### Code Splitting
+# 🎮 Demo 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# frontend
+- Check out our live demo at 

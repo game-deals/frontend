@@ -1,0 +1,17 @@
+#poster{
+    width: 100%;
+    border-radius: 0;
+    padding: 40px;
+    background-image: url('https://media.discordapp.net/attachments/1110266841940623371/1113010041734312016/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg?width=957&height=670');
+background-size: 100% 100%; 
+display: flex;
+gap:50px
+}
+
+#sub-poster{
+    color: #9A9A9A;
+    display: flex;
+    flex-direction: column;
+width: 50%;
+margin: auto;
+}

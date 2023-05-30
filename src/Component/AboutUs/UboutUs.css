@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+.bodyAboutUs {
+    background-color: rgb(18, 18, 18) ;
+  display: flex;
+  font-family: "Merriweather", serif;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+/* .person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+} */
+/* .container {
+  border-radius: 50%;
+  height: 312px;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
+} */
+/* .container:after {
+  background-color:rgba(12, 13, 19, 0.5) ;
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: 390px;
+  width: 100%;
+} */
+/* .container:hover {
+  transform: scale(0.54);
+} */
+/* .container-inner {
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+  position: relative;
+  transform-origin: 50%;
+  top: -200px;
+} */
+#sub-header{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  
+}
+#header{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(18, 18, 18) ;
+  color: aliceblue;
+  width: 100%;
+  padding: 20px;
+align-items: center;
+}
+/* .circle {
+  background-color: #fee7d3;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 380px;
+ 
+  pointer-events: none;
+ 
+  width: 380px;
+} */
+.divcontenar{
+  margin-top:1%;
+  display:flex;
+  width:280px;
+  height:350px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5c5858aa;
+  border-radius: 2%;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
+
+}
+/* .img {
+  pointer-events: none;
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+/* .container:hover .img {
+  transform: translateY(0) scale(1.2);
+} */
+
+/* .divider {
+  background-color: #ca6060;
+  height: 1px;
+  width: 160px;
+} */
+.name {
+  color: #fbfcff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.title {
+  color: #6e6e6e;
+  font-family:inherit;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom:0%;
+}
+i{
+  margin-top:8px;
+}
+.imgperson{
+  border-radius: 50%;
+  transition: transform .2s;
+  width:51%;
+  height:50%;
+
+  
+  
+  
+}
+.imgperson:hover {
+  transform: scale(1.1);}

@@ -1,0 +1,25 @@
+.custom-modal {
+width: 20%;
+height: 50px;
+    /* Add your desired background color */
+  }
+  
+  .custom-modal .modal-header {
+    
+    /* Add your desired header background color */
+    background-color: rgb(175, 176, 177);
+    color:rgb(16, 17, 24),; /* Add a text color that contrasts with the header background */
+  }
+  .custom-modal .modal-body {
+    /* Add your desired body background color */
+    background: linear-gradient( rgb(16, 17, 24), #9A9A9A )
+    ; color: #9A9A9A;/* Add a text color that contrasts with the header background */
+
+  }
+  
+  .custom-modal .modal-footer {
+    /* Add your desired footer background color */
+    background-color: rgb(175, 176, 177);
+    /* Add a text color that contrasts with the header background */
+
+  }
